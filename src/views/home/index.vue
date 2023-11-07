@@ -135,12 +135,12 @@ getToplist()
 <template>
   <van-search disabled :placeholder="defaultPlaceholder" shape="round">
     <template #left>
-      <div i-carbon-menu mr-3 text-xl />
+      <div i-carbon-menu mr-3 text-2xl />
     </template>
   </van-search>
 
   <div p-2>
-    <div mb-2 overflow-hidden rounded-2>
+    <div mb-3 overflow-hidden rounded-2>
       <van-swipe
         class="my-swipe"
         :autoplay="3000"
@@ -161,7 +161,7 @@ getToplist()
       </van-swipe>
     </div>
 
-    <div mb-2 flex rounded bg-white py-2>
+    <div mb-3 flex rounded bg-white py-3>
       <div
         v-for="item in gridList"
         :key="item.name"
@@ -178,8 +178,8 @@ getToplist()
       </div>
     </div>
 
-    <div mb-2 overflow-hidden rounded bg-white p-2>
-      <div mb-2 flex items-center>
+    <div mb-3 overflow-hidden rounded bg-white p-3>
+      <div mb-3 flex items-center>
         <div text-15px>
           推荐歌单
         </div>
@@ -192,13 +192,13 @@ getToplist()
             <van-image
               class="rounded"
               lazy-load
-              h-90px
-              w-90px
+              h-100px
+              w-100px
               overflow-hidden
               object-cover
               :src="item.picUrl"
             />
-            <div w-90px text-12px class="text-black/80">
+            <div w-100px text-12px class="text-black/80">
               <van-text-ellipsis rows="2" :content="item.name" />
             </div>
           </div>
@@ -212,8 +212,8 @@ getToplist()
       </div>
     </div>
 
-    <div mb-2 overflow-hidden rounded bg-white p-2>
-      <div mb-2 flex items-center>
+    <div mb-3 overflow-hidden rounded bg-white p-3>
+      <div mb-3 flex items-center>
         <div mr-2 text-15px>
           不可错过的欧美歌单
         </div>
@@ -246,8 +246,8 @@ getToplist()
               <van-image
                 lazy-load
                 mr-2
-                h-50px
-                w-50px
+                h-60px
+                w-60px
                 overflow-hidden
                 rounded-2
                 fit="cover"
@@ -267,8 +267,8 @@ getToplist()
       </div>
     </div>
 
-    <div mb-2 overflow-hidden rounded bg-white p-2>
-      <div mb-2 flex items-center>
+    <div mb-3 overflow-hidden rounded bg-white p-3>
+      <div mb-3 flex items-center>
         <div mr-2 text-15px>
           热门电台
         </div>
@@ -298,8 +298,8 @@ getToplist()
               <van-image
                 lazy-load
                 mr-2
-                h-50px
-                w-50px
+                h-60px
+                w-60px
                 overflow-hidden
                 rounded-2
                 fit="cover"
@@ -319,8 +319,8 @@ getToplist()
       </div>
     </div>
 
-    <div mb-2 overflow-hidden rounded bg-white p-2>
-      <div mb-2 flex items-center>
+    <div mb-3 overflow-hidden rounded bg-white p-3>
+      <div mb-3 flex items-center>
         <div mr-2 text-15px>
           推荐新音乐
         </div>
@@ -350,8 +350,8 @@ getToplist()
               <van-image
                 lazy-load
                 mr-2
-                h-50px
-                w-50px
+                h-60px
+                w-60px
                 overflow-hidden
                 rounded-2
                 fit="cover"
@@ -373,7 +373,7 @@ getToplist()
       </div>
     </div>
 
-    <div rounded bg-white p-2>
+    <div rounded bg-white p-3>
       <van-swipe
         class="my-swipe"
         :autoplay="0"
@@ -381,7 +381,7 @@ getToplist()
         :show-indicators="false"
       >
         <van-swipe-item v-for="item in rankList" :key="item.id">
-          <div mb-2 flex items-center>
+          <div mb-3 flex items-center>
             <div text-15px>
               {{ item.name }}
             </div>
