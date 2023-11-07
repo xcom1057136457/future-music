@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+    />
+    <style>
+      .loading-wrapper {
+        position:fixed;inset:0;margin:0;display:flex;align-items:center;justify-content:center;--un-bg-opacity:0.8;background-color:rgba(0, 0, 0, var(--un-bg-opacity));padding:0;--un-text-opacity:1;color:rgb(255 255 255 / var(--un-text-opacity));
+      }
+
+      .loading-box {
+        display:flex;flex-direction:column;align-items:center;justify-content:center;
+      }
+
+      .loading-text {
+        margin-top:30px;
+      }
+
+      .loading-text-1 {
+        text-align:center;font-size:16px;line-height:24px;
+      }
+
+      .loading-text-2 {
+        margin-top:10px;text-align:center;font-size:14px;line-height:20px;color:rgb(255 255 255 / 0.7);
+      }
+
+      .trinity-rings-spinner,
+      .trinity-rings-spinner * {
+        box-sizing:border-box;
+      }
+
+      .trinity-rings-spinner {
+        position:relative;box-sizing:border-box;height:110px;width:110px;display:flex;flex-direction:row;align-items:center;justify-content:center;overflow:hidden;padding:3px;
+      }
+
+      .trinity-rings-spinner .circle {
+        position:absolute;display:block;border-width:3px;--un-border-opacity:1;border-color:rgb(255 255 255 / var(--un-border-opacity));border-radius:9999px;border-style:solid;opacity:1;
+      }
+
+      .trinity-rings-spinner .circle:nth-child(1) {
+        height:100px;width:100px;border-width:3px;
+        animation: trinity-rings-spinner-circle1-animation 1.5s infinite linear;
+      }
+      .trinity-rings-spinner .circle:nth-child(2) {
+        height:calc(100px * 0.65);width:calc(100px * 0.65);border-width:2px;
+        animation: trinity-rings-spinner-circle2-animation 1.5s infinite linear;
+      }
+      .trinity-rings-spinner .circle:nth-child(3) {
+        height:calc(100px * 0.1);width:calc(100px * 0.1);border-width:1px;
+        animation: trinity-rings-spinner-circle3-animation 1.5s infinite linear;
+      }
+
+      @keyframes trinity-rings-spinner-circle1-animation {
+        0% {
+          transform: rotateZ(20deg) rotateY(0deg);
+        }
+        100% {
+          transform: rotateZ(100deg) rotateY(360deg);
+        }
+      }
+      @keyframes trinity-rings-spinner-circle2-animation {
+        0% {
+          transform: rotateZ(100deg) rotateX(0deg);
+        }
+        100% {
+          transform: rotateZ(0deg) rotateX(360deg);
+        }
+      }
+      @keyframes trinity-rings-spinner-circle3-animation {
+        0% {
+          transform: rotateZ(100deg) rotateX(-360deg);
+        }
+        100% {
+          transform: rotateZ(-360deg) rotateX(360deg);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/js/index.79fa6319.js"></script>
+    <link rel="modulepreload" crossorigin href="/js/.pnpm/.pnpm.4cafd867.js">
+    <link rel="stylesheet" href="/css/.pnpm.e4fded6f.css">
+    <link rel="stylesheet" href="/css/index.6863758a.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="loading-wrapper">
+        <div class="loading-box">
+          <div class="trinity-rings-spinner">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+          <div class="loading-text">
+            <div class="loading-text-1">正在加载资源</div>
+            <div class="loading-text-2">
+              初次加载资源可能需要较多时间 请耐心等待
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
